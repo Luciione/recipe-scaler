@@ -45,4 +45,9 @@ for ingredient, amount in recipe.items():
 print("Shopping List:")
 print(shopping_list)
 
+items_to_buy = 0
+for item in shopping_list:
+    items_to_buy += 1
+
+print("Total items to buy:", items_to_buy)
                                    
