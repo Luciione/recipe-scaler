@@ -29,5 +29,12 @@ scale_factor = party_size / original_servings
 
 print(scale_factor)
 
+print("Scaled Recipe Quantities:")
+
+for ingredient, amount in recipe.items():
+    needed_amount = amount * scale_factor
+    print(ingredient, ":", needed_amount)
+    
+
 
                                    
