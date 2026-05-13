@@ -20,5 +20,14 @@ pantry = {
 
 print(pantry)
 
+#Original serving size
+original_servings = 4
+#party size
+party_size = 10
+#scaling factor 
+scale_factor = party_size / original_servings
+
+print(scale_factor)
+
 
                                    
