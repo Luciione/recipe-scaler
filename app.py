@@ -34,7 +34,15 @@ print("Scaled Recipe Quantities:")
 for ingredient, amount in recipe.items():
     needed_amount = amount * scale_factor
     print(ingredient, ":", needed_amount)
-    
 
+shopping_list = []
+for ingredient, amount in recipe.items():
+    needed_amount = amount * scale_factor
+
+    if ingredient not in pantry or needed_amount > pantry[ingredient]:
+        shopping_list.append(ingredient)
+
+print("Shopping List:")
+print(shopping_list)
 
                                    
