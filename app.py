@@ -7,9 +7,8 @@ recipe = {
     "olive oil": 50
 }
 
-print(recipe)
-
 # Pantry stock available at home 
+
 pantry = {
     "pasta": 300,
     "tomatoes": 10,
@@ -18,22 +17,18 @@ pantry = {
     "olive oil": 100
 }
 
-print(pantry)
-
-#Original serving size
 original_servings = 4
-#party size
 party_size = 10
 #scaling factor 
 scale_factor = party_size / original_servings
 
-print(scale_factor)
-
-print("Scaled Recipe Quantities:")
+shopping_list = []
+print("Scaled Recipe:\n")
 
 for ingredient, amount in recipe.items():
     needed_amount = amount * scale_factor
-    print(ingredient, ":", needed_amount)
+
+print(f"{ingredient}: {needed_amount}")
 
 shopping_list = []
 for ingredient, amount in recipe.items():
@@ -42,12 +37,14 @@ for ingredient, amount in recipe.items():
     if ingredient not in pantry or needed_amount > pantry[ingredient]:
         shopping_list.append(ingredient)
 
-print("Shopping List:")
-print(shopping_list)
-
+#count items
 items_to_buy = 0
+
 for item in shopping_list:
     items_to_buy += 1
 
-print("Total items to buy:", items_to_buy)
+print("\nShopping List:")
+print(shopping_list)
+
+print("\nTotal items to buy:", items_to_buy)
                                    
